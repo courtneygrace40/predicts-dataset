@@ -4,7 +4,7 @@ This is an end-to-end data pipeline using the PREDICTS dataset, which contains o
 
 [View Full Technical Report (PDF)](Predicting_the_Health_Status_of_Ecological_Sites_Using_Machine_Learning_Methods.pdf)
 
-## Key Accomplishments & Metrics
+### Key Accomplishments & Metrics
 - Massive Scale Data Pipeline: Sanitized and transformed a high-dimensional dataset with 72 attributes. Handled missing data mechanisms (MCAR vs. MNAR), engineered log-transforms for highly skewed metrics, and filtered outliers through statistical profiling.  
 - Unsupervised Taxonomy Design: Built a K-Means clustering algorithm using principal component dimensions (explaining 85.5% of total variance) to objectively establish health baseline profiles using Shannon and Simpson diversity indices.  
 - Advanced Feature Engineering: Avoided sparse matrix issues for high-cardinality geographic attributes by mapping complex categories (e.g., countries, biomes) into low-dimensional word embeddings for deep learning ingestion.  
@@ -21,3 +21,11 @@ This is an end-to-end data pipeline using the PREDICTS dataset, which contains o
 
 *Source: PREDICTS Database*
 
+### Evaluation of Models
+| Predictive Model | Balancing & Optimization Strategy | Overall Accuracy | Degraded Recall (Sensitivity) | Core Tradeoffs & Model Constraints |
+| :--- | :--- | :---: | :---: | :--- |
+| **Deep Neural Network** | Hybrid: Undersampling + Class Weights | **0.820** | **0.590** | Best multi-class consistency; cleanly isolates healthy and degraded clusters with minor mix-ups. |
+| **Random Forest** | Balanced Split (Tuned Baseline) | 0.688 | 0.8033 | Superior raw sensitivity for the degraded class, but highly prone to overpredicting transitional sites. |
+| **Naïve Bayes** | Balanced Post-Split | 0.313 | 0.560 | Failed to meet the no-information rate due to an invalid assumption of strict feature independence. |
+
+*Source: PREDICTS Database Analytics Framework Evaluation*

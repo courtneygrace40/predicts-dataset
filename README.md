@@ -10,3 +10,14 @@ This is an end-to-end data pipeline using the PREDICTS dataset, which contains o
 - Advanced Feature Engineering: Avoided sparse matrix issues for high-cardinality geographic attributes by mapping complex categories (e.g., countries, biomes) into low-dimensional word embeddings for deep learning ingestion.  
 - Class Imbalance Resolution: Optimized model behavior against a heavily skewed majority class by introducing a hybrid strategy combining random majority undersampling and custom cross-entropy class weighting.  
 - High-Performance Modeling: Outperformed a Naïve Bayes baseline ($31.3\%$ accuracy) by training a 3-layer Deep Neural Network yielding an overall accuracy of **82%** and a multi-class AUC of **0.9569**. 
+
+### Class Breakdown
+| Health Status Code | Profile Description | Avg. Shannon Index | Avg. Simpson Index | Avg. Abundance | Avg. Richness |
+| :---: | :--- | :---: | :---: | :---: | :---: |
+| **1** | Degraded | 0.5239471 | 0.2911697 | 2,187.002 | 3.080601 |
+| **2** | Healthy | 3.3346419 | 0.9414118 | 1,382.080 | 55.995928 |
+| **3** | Transitional | 2.0014464 | 0.8132311 | 2,738.989 | 11.207040 |
+| **4** | Outliers (Thrown out) | 1.9719159 | 0.7759321 | 47,194.956 | 14.571577 |
+
+*Source: PREDICTS Database*
+

@@ -9,4 +9,4 @@ This is an end-to-end data pipeline using the PREDICTS dataset, which contains o
 - Unsupervised Taxonomy Design: Built a K-Means clustering algorithm using principal component dimensions (explaining 85.5% of total variance) to objectively establish health baseline profiles using Shannon and Simpson diversity indices.  
 - Advanced Feature Engineering: Avoided sparse matrix issues for high-cardinality geographic attributes by mapping complex categories (e.g., countries, biomes) into low-dimensional word embeddings for deep learning ingestion.  
 - Class Imbalance Resolution: Optimized model behavior against a heavily skewed majority class by introducing a hybrid strategy combining random majority undersampling and custom cross-entropy class weighting.  
-- High-Performance Modeling: Outperformed a Naïve Bayes baseline ($31.3\%$ accuracy) by training a 3-layer Deep Neural Network yielding an overall accuracy of 82% and a multi-class AUC of 0.9569. 
+- High-Performance Modeling: Outperformed a Naïve Bayes baseline ($31.3\%$ accuracy) by training a 3-layer Deep Neural Network yielding an overall accuracy of **82%** and a multi-class AUC of **0.9569**. 

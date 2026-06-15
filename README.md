@@ -3,7 +3,9 @@
 This is an end-to-end data pipeline using the PREDICTS dataset, which contains over 1,000,000 observations. The goal of these models is to classify sites as Healthy, Transitional, or Degraded using the attributes recorded in this study. By classifying sites, this model can help scientists identify when and why sites become degraded to intervene sooner to restore ecological diversity.  
 
 [View Full Technical Report (PDF)](Predicting_the_Health_Status_of_Ecological_Sites_Using_Machine_Learning_Methods.pdf)
-[View Tableau Dashboard](PREDICTS.twbx)
+
+
+[Download Tableau Dashboard](PREDICTS.twbx)
 
 ### Key Accomplishments & Metrics
 - Massive Scale Data Pipeline: Sanitized and transformed a high-dimensional dataset with 72 attributes. Handled missing data mechanisms (MCAR vs. MNAR), engineered log-transforms for highly skewed metrics, and filtered outliers through statistical profiling.  
